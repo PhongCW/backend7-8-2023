@@ -29,6 +29,7 @@ class AdminController extends Controller
         $Condition = $Condition['Condition'];
         if ($Condition == 1){
             Auth::logout();
+            return redirect();
         }
         else{
             echo "nice";
