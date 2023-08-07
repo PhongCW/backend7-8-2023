@@ -24,4 +24,14 @@ class AdminController extends Controller
             echo "please try again";
         }
     }
+    function Logout(Request $request){
+        $Condition = $request->all();
+        $Condition = $Condition['Condition'];
+        if ($Condition == 1){
+            Auth::logout();
+        }
+        else{
+            echo "nice";
+        }
+    }
 }
